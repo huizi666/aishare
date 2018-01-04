@@ -1,6 +1,12 @@
 <!--index.wxml-->
 <view class='container'>
-  <view class='banner'>banner</view>
+  <view class='banner'>
+    <view class="banner-title" animation="{{animationData}}">《追风筝的人》</view>
+    <view class="banner-title" animation="{{animationData}}">《追风筝的人》</view>
+    <view class="banner-title" animation="{{animationData}}">《追风筝的人》</view>
+    <view class="banner-title" animation="{{animationData}}">《追风筝的人》</view>
+    <view class="banner-title" animation="{{animationData}}">《追风筝的人》</view>
+  </view>
   <view class='feel'>
     <text>过去的一年是的感受是什么？</text>
     <view class='feel-select'>
@@ -18,3 +24,4 @@
  
   <button>生成书单</button>
 </view>
+<view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
