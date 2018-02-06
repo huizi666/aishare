@@ -1,14 +1,21 @@
 //logs.js
 const util = require('../../utils/util.js')
+var json = [
+  { text: '12而为时已晚321' },
+  { text: '反倒' },
+  { text: '但还是是否合适' },
+  { text: '123符合胜多负少时候21' },
+  { text: '123试试21' },
+]
 
 Page({
   data: {
-    text: '这是一条会滚动的文字滚来滚去的文字跑马灯，哈哈哈哈哈哈哈哈',
+    text: json,
     marqueePace: 1,//滚动速度
     marqueeDistance: 0,//初始滚动距离
     marqueeDistance2: 0,
     marquee2copy_status: false,
-    marquee2_margin: 90,
+    marquee2_margin: 40,
     size: 14,
     orientation: 'left',//滚动方向
     interval:10 // 时间间隔

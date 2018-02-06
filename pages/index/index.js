@@ -9,7 +9,7 @@ Page({
   onShow: function () {
    
     var animation = wx.createAnimation({
-      duration: 10000,
+      duration: 7000,
       timingFunction: 'ease-in',
      
     })

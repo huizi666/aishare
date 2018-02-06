@@ -1,0 +1,20 @@
+<!--pages/bg/bg.wxml-->
+<view class='bg-main'>
+   <!-- <text  animation="{{animationData1}}" wx:for="{{code}}" wx:for-index="idx" wx:for-item="item" wx:key style="top:{{item.top}}rpx;left:{{item.left}}rpx;" > {{item.bookName}}</text>  -->
+  <text  animation="{{animationData1}}"wx:key style="top:22rpx;left:33rpx;" > 《最後的貴族》</text>  
+  <text  animation="{{animationData2}}"wx:key style="top:242rpx;left:129rpx;" > 《计算机程序的构造和解释》</text>
+  <text  animation="{{animationData3}}"wx:key style="top:282rpx;left:323rpx;" > 《橘子不是唯一的水果》</text>
+  <text  animation="{{animationData4}}"wx:key style="top:202rpx;left:473rpx;" > 《当尼采哭泣》</text>
+  <text  animation="{{animationData5}}"wx:key style="top:382rpx;left:93rpx;" > 《JavaScript语言精粹》</text>
+  <text  animation="{{animationData1}}"wx:key style="top:882rpx;left:433rpx;" > 《洛克菲勒留给儿子的38封信》</text>  
+  <text  animation="{{animationData2}}"wx:key style="top:722rpx;left:133rpx;" > 《昨日的世界》</text>
+  <text  animation="{{animationData3}}"wx:key style="top:142rpx;left:53rpx;" > 《穷查理宝典》</text>
+  <text  animation="{{animationData4}}"wx:key style="top:662rpx;left:273rpx;" > 《Predictably Irrational》</text>
+  <text  animation="{{animationData5}}"wx:key style="top:432rpx;left:453rpx;" > 《三国演义》</text>
+  <text  animation="{{animationData1}}"wx:key style="top:572rpx;left:33rpx;" > 《海蒂性学报告》</text>  
+  <text  animation="{{animationData2}}"wx:key style="top:622rpx;left:133rpx;" > 《证券分析》</text>
+  <text  animation="{{animationData3}}"wx:key style="top:942rpx;left:353rpx;" > 《费恩曼物理学讲义（第1卷）》</text>
+  <text  animation="{{animationData4}}"wx:key style="top:526rpx;left:73rpx;" > 《中国哲学简史》</text>
+  <text  animation="{{animationData5}}"wx:key style="top:82rpx;left:293rpx;" > 《撒哈拉的故事》</text>
+</view>
+
