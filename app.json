@@ -2,7 +2,8 @@
   "pages": [
     "pages/bg/bg",
     "pages/logs/logs",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/canves/canves"
   ],
   "window": {
     "backgroundTextStyle": "light",

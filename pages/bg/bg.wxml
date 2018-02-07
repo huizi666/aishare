@@ -1,7 +1,8 @@
 <!--pages/bg/bg.wxml-->
-<view class='bg-main'>
+<view class="bg-main" style='background: {{bgColor}} ?"#212121" : "#ccc" '>
    <!-- <text  animation="{{animationData1}}" wx:for="{{code}}" wx:for-index="idx" wx:for-item="item" wx:key style="top:{{item.top}}rpx;left:{{item.left}}rpx;" > {{item.bookName}}</text>  -->
-  <text  animation="{{animationData1}}"wx:key style="top:22rpx;left:33rpx;" > 《最後的貴族》</text>  
+  <view class='title'>AiShare2018年推荐书单</view>
+  <text  animation="{{animationData1}}"wx:key style="top:62rpx;left:33rpx;" > 《最後的貴族》</text>  
   <text  animation="{{animationData2}}"wx:key style="top:242rpx;left:129rpx;" > 《计算机程序的构造和解释》</text>
   <text  animation="{{animationData3}}"wx:key style="top:282rpx;left:323rpx;" > 《橘子不是唯一的水果》</text>
   <text  animation="{{animationData4}}"wx:key style="top:202rpx;left:473rpx;" > 《当尼采哭泣》</text>
@@ -16,5 +17,21 @@
   <text  animation="{{animationData3}}"wx:key style="top:942rpx;left:353rpx;" > 《费恩曼物理学讲义（第1卷）》</text>
   <text  animation="{{animationData4}}"wx:key style="top:526rpx;left:73rpx;" > 《中国哲学简史》</text>
   <text  animation="{{animationData5}}"wx:key style="top:82rpx;left:293rpx;" > 《撒哈拉的故事》</text>
+  <view class='getList' bindtap="getList" data-obj="open">获取你的专属书单</view>
+  <!----model----->
+  <view class='user ' wx:if='{{getModel}}'>
+    <view class='userClose' bindtap='getList' data-obj="close">X</view>
+    <input class='userName' placeholder="输入你的名字..." auto-focus/>
+    <view class='userPickTitle'>选择你2018年关键词</view> 
+    <view class='userPickContianer'>
+      <button class='userPick' 
+      wx:for="{{json}}" wx:for-index="idx" wx:for-item="item" wx:key 
+      data-keyword="{{item.key}}"
+      bindtap='chooseKey' >{{item.keyWord}}</button>
+    </view>
+    <button class='userButton' bindtap='creat'>生成</button>
+  </view>
+  <!----model----->
+  
 </view>
 

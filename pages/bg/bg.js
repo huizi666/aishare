@@ -1,9 +1,12 @@
 var json = [
-  { text: '12而为时已晚321' },
-  { text: '反倒' },
-  { text: '但还是是否合适' },
-  { text: '123符合胜多负少时候21' },
-  { text: '123试试21' },
+  { keyWord: '收获', key: 'a' },
+  { keyWord: '满足', key: 'b' },
+  { keyWord: '机遇', key: 'c' },
+  { keyWord: '沮丧', key: 'd' },
+  { keyWord: '成功', key: 'e' },
+  { keyWord: '学习', key: 'f' },
+  { keyWord: '失败', key: 'g' },
+  { keyWord: '幸福', key: 'h' },
 ]
 const code = require('../../utils/code.js').code
 var dur = Math.round(Math.random() * 10) + 1000
@@ -19,7 +22,7 @@ for (var j = 0; j < code.length; j++) {
     x++
   }
 }
-console.log(code)
+//console.log(code)
 // pages/bg/bg.js
 Page({
 
@@ -34,6 +37,8 @@ Page({
     animationData3: {},
     animationData4: {},
     animationData5: {},
+    getModel:false,
+    bgColor:false,
   },
 
   /**
@@ -71,7 +76,7 @@ Page({
       this.setData({
         animationData1: animation.export()
       })
-    }.bind(this), 2000)
+    }.bind(this), 1000)
     setTimeout(function () {
       this.fadeIn(animation)
       this.setData({
@@ -83,13 +88,13 @@ Page({
       this.setData({
         animationData3: animation.export()
       })
-    }.bind(this), 3000)
+    }.bind(this), 1500)
     setTimeout(function () {
       this.fadeIn(animation)
       this.setData({
         animationData4: animation.export()
       })
-    }.bind(this), 6000)
+    }.bind(this), 2600)
     setTimeout(function () {
       this.fadeIn(animation)
       this.setData({
@@ -97,6 +102,44 @@ Page({
       })
     }.bind(this), 500)
 
+  },
+  //选择关键字
+  chooseKey:function (event){
+    let choosenKey = event.target.dataset.keyword;
+    wx.setStorage({
+      key: event.target.dataset.keyword,
+      data: choosenKey
+    })
+    wx.getStorageInfo({
+      success: function (res) {
+        console.log(res.keys)
+        console.log(res.currentSize)
+        console.log(res.limitSize)
+      }
+    })
+  },
+  //生成书单
+  creat: function (){
+    wx.redirectTo({
+      url: '../canves/canves'
+    })
+  },
+  //开关model
+  getList: function(event){
+    let obj = event.target.dataset.obj;
+    if(obj === 'open'){
+      this.setData({
+        getModel: true,
+        bgColor: true,
+      })
+    }else if(obj === 'close'){
+      this.setData({
+        getModel: false,
+        bgColor: false,
+      })
+      wx.clearStorage()
+    }
+    
   },
   //闪烁动画
   fadeIn: function (animation){

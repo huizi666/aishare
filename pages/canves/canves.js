@@ -1,0 +1,85 @@
+// pages/canves/canves.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    const ctx = wx.createCanvasContext('myCanvas')
+    ctx.setFillStyle('Aquamarine')
+    ctx.setFontSize(20)
+    ctx.fillText("XXX2018推荐书单", 30, 30)
+    ctx.fillText("XXX2018推荐书单", 30, 60)
+    ctx.fillText("XXX2018推荐书单", 30, 80)
+    ctx.fillText("XXX2018推荐书单", 30, 100)
+    ctx.fillText("XXX2018推荐书单", 30, 120)
+    ctx.draw()
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    wx.canvasToTempFilePath({
+      x: 100,
+      y: 200,
+      width: 50,
+      height: 50,
+      destWidth: 100,
+      destHeight: 100,
+      canvasId: 'myCanvas',
+      success: function (res) {
+        console.log(res.tempFilePath)
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})
