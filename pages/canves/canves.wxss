@@ -1,1 +1,5 @@
 /* pages/canves/canves.wxss */
+#myCanvas{
+  width: 720rpx;
+  height: 900rpx;
+}
